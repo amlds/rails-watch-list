@@ -1,5 +1,10 @@
 <h1>List#index</h1>
 
+<div class="header">
+  <h1>Voici vos liste de film</h1>
+  <%= link_to "add", new_list_path, class: "button"%>
+</div>
+
 <% @lists.each do |list| %>
   <%= link_to list.name, list_path(list)%>
 <% end %>
