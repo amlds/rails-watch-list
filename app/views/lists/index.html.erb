@@ -5,7 +5,10 @@
   <%= link_to "add", new_list_path, class: "button"%>
 </div>
 
+<div class="card">
 <% @lists.each do |list| %>
-  <%= link_to list.name, list_path(list)%>
+  <%= cl_image_tag @list.photo.key, height: 300, crop: :fill, class: "card--image" %>
+  <div class="card--infos">
+    <%= link_to list.name, list_path(list)%>
+  </div>
 <% end %>
-  
