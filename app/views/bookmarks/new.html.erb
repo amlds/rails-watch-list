@@ -1,0 +1,8 @@
+<h1>Bookmark#new</h1>
+<p>Find me in app/views/bookmark/new.html.erb</p>
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :movie_id, collection: @movies %>
+  <%= f.submit %>
+<% end %>

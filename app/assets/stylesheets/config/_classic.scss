@@ -1,0 +1,43 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  @include display-left;
+  flex-direction: column;
+  background-color: $background-primary;
+}
+
+.containt {
+  margin: 0 100px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+  color: $text-primary;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: $text-secondary;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+
+h3 {
+  color: $text-secondary;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+}

@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  @include box-shadow;
+ 
+    &--image {
+      width: 400px;
+      height: 200px;
+      background-image: url('https://source.unsplash.com/random/600x300');
+      background-size: 100%;
+      border-radius: 2px 2px 0px 0px;
+      transition: all 0.3s ease;
+    }
+
+    &--infos {
+      height: 40px;
+      background: $background-secondary;
+      border-radius: 0px 0px 2px 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 10px;
+      transition: all 0.3s ease;
+
+      h1 {
+        margin: 0;
+      }
+
+      &--tag {
+        color: $text-secondary;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        padding: 4px 8px;
+        font-size: 16px;
+        border: 1px solid rgba(222, 155, 11, 0.5);
+        background: rgba(222, 155, 11, 0.2);
+      }
+    }
+  
+    &:hover {
+      cursor: pointer;
+      .card--image{
+        background-size: 110%;
+        height: 180px;
+       }
+      .card--infos {
+        height: 60px;
+      }
+    }
+}
