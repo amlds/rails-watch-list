@@ -5,10 +5,17 @@
   <%= link_to "add", new_list_path, class: "button"%>
 </div>
 
-<div class="card">
-<% @lists.each do |list| %>
-  <%= cl_image_tag @list.photo.key, height: 300, crop: :fill, class: "card--image" %>
-  <div class="card--infos">
-    <%= link_to list.name, list_path(list)%>
-  </div>
-<% end %>
+<div class="list">
+  <% @lists.each do |list| %>
+  <div class="card">
+    <%= link_to list_path(list), class: "card--clickable" do %>
+        <% if list.photo.attached? %>
+          <%= cl_image_tag list.photo.key, class: "card--image" %>
+        <% end %>
+        <div class="card--infos">
+          <h1><%= list.name %></h1>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

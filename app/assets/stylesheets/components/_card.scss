@@ -23,6 +23,12 @@
       padding: 0px 10px;
       transition: all 0.3s ease;
 
+      &--right {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+
       h1 {
         margin: 0;
       }
@@ -48,4 +54,10 @@
         height: 60px;
       }
     }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
 }
